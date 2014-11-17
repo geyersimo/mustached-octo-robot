@@ -1,0 +1,58 @@
+\documentclass{scrartcl}
+\usepackage{geometry}
+\geometry{verbose,a4paper,tmargin=40mm,bmargin=35mm,lmargin=40mm,rmargin=40mm,nomarginpar}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{6pt}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{fixltx2e}
+\usepackage{kpfonts}
+\usepackage[sc]{mathpazo} %[sc,osf] für oldstylenumbers
+%\usepackage{eulervm} % <-- falls Formeln falsch angezeigt werden
+\usepackage[scaled]{helvet} % ss
+\usepackage{courier} % tt
+\linespread{1.05} % weil palationo
+\normalfont
+\usepackage[T1]{fontenc}
+
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\author{Simon Geyer}
+\date{\today}
+\title{CS 102 \LaTeX{} Übung}
+
+\begin{document}
+\maketitle
+
+\section{Das ist der erste Abschnitt}
+Hier könnte auch anderer Text stehen.
+
+\section{Tabelle}
+Unsere wichtigsten Daten finden sie in Tabelle \ref{tab}.
+\begin{center}
+\begin{tabularx}{0.78\textwidth}{X|c|c|c}
+& Punkte erhalten & Punkte möglich & \% \\
+\hline
+Aufgabe 1 & 2 & 4 & 50\\
+Aufgabe 2 & 3 & 3 & 100\\
+Aufgabe 3 & 3 & 3 & 100\\
+\end{tabularx}
+\captionof{table}{Eine Tabelle mit Werten.}
+\label{tab}
+\end{center}
+
+\section{Formeln}
+
+\subsection{Pythagoras}
+Der Satz des Pythagoras errechnet sich wie folgt: $a^2 + b^2 = c^2$ . Daraus können
+wir die Länge der Hypothenuse wie folgt berechnen: $c = \sqrt{a^2 + b^2}$.
+
+\subsection{Summen}
+Wir können auch die Formel für eine Summe angeben:
+\begin{equation}
+s = \sum_{i=1}^{n} i = \frac{n\cdot (n + 1)}{2}
+\end{equation}
+\end{document}
